@@ -1,0 +1,346 @@
+:root{
+    --main-bg-color: #f3f5fc;
+    --encrypt-btn-color: #0a3871;
+    --decrypt-btn-color: #d8dfe8;
+}
+
+*{
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background: var(--main-bg-color);
+}
+
+/* main */
+.text-boxes{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px 40px;
+}
+
+/* Input section */
+.insert-box{
+    width: 1000px;
+    height: 100%;
+    background: transparent; 
+} 
+.message-area{
+    padding: 90px 0 0 120px;
+    width: 85%;
+    height: 500px;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+#message{
+    width: 90%;
+    height: 100%;
+    border-style: none;
+    background: transparent;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    text-wrap:pretty;
+    resize: none; 
+    scrollbar-color: transparent transparent;
+    color: #0A3871;
+    text-transform: lowercase;
+}
+
+#message::placeholder{
+    padding-top: 10px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #0A3871;
+}
+
+.info{
+    font-size: 12px;
+    opacity: 80%;
+    padding-left: 120px;
+}
+
+.info:before{
+    content: url(src/exclamation_icon.svg);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    opacity: 80%;
+    transform: translateY(25%);
+}
+
+/* Result section */
+.result-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 400px;
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.initial-text{
+    padding-top: 200px;
+    align-self: center;
+    overflow-wrap: break-word;
+}
+
+.doll{
+    align-items: center;
+}
+
+section div div p:first-of-type{
+    font-weight:bold;
+    font-size: 24px;
+    padding: 15px;
+}
+
+.resultMessage{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    height: 80%;
+    width: 90%;
+    color: #495057;
+    border-style: none;
+    background: transparent;
+    font-family: "Inter", sans-serif;
+    text-wrap:pretty; 
+    resize: none; 
+    scrollbar-color: transparent transparent;
+    padding-top: 30px;
+}
+
+/* buttons*/
+.btn-copy{
+    background: burlywood;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 15px 0 10px 30px;
+}
+
+.btn{
+    width: 336px;
+    height:67px;
+    border: 1px solid var(--encrypt-btn-color);
+    border-radius: 24px;
+    padding: 24px;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--encrypt-btn-color);
+    align-items: baseline;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#encrypt{
+    background: var(--encrypt-btn-color);
+    color: #ffffff;
+}
+
+#encrypt:hover{
+    background: #072b61;
+}
+
+#decrypt{
+    background: var(--decrypt-btn-color);
+}
+
+#decrypt:hover{
+    background: #eff1fa;
+}
+
+/* Footer */
+footer{
+    background: var(--encrypt-btn-color);
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+footer p{
+    margin: 0.5em;
+}
+
+.logos{
+    width: 30px;
+}
+
+/* Responsive */
+@media screen and (min-width: 375px) and (max-width: 1023px){
+    .text-boxes{
+        display:flex;
+        min-height: 1174px;
+        flex-direction: column;
+        align-content: center; 
+ 
+        align-items: center; 
+        padding: 40px 40px;
+    }
+
+    .insert-box{
+        width: 768px;
+        min-height: 800px;
+    } 
+
+    .message-area{
+        padding: 25px 0 0 50px;
+        width: 90%;
+        min-height: 700px;
+    }
+
+    #message{
+        width: 100%;
+        font-weight: 400;
+        font-size: 32px;
+        padding-right: 30px;
+        resize: none; 
+        overflow: hidden;
+        color: #0A3871;
+        text-transform: lowercase;
+    }
+
+    /* result */
+    .result-box{
+        align-items: center;
+        width: 688px;
+        background: #ffffff;
+        margin-top: 60px;
+        padding: 20px 0px 20px 0px;
+    } 
+
+    .img_doll{
+        display: none;
+    }
+
+    .initial-text{
+        align-self: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+    }
+    
+    .resultMessage{
+        min-height: 343px;
+        max-width: 100%; 
+        white-space: break-word;
+        padding: 0;
+        text-size-adjust: auto;
+    }
+    
+    /* buttons*/
+    .btn-copy{
+        background: burlywood;
+    }
+    
+    .btns{
+        display: flex;
+        padding: 15px 30px 0 30px;
+    }
+}
+
+
+/* Responsive smartphone */
+@media screen and (max-width: 768px){
+    .text-boxes{
+        display:flex;
+        min-height: 933px;
+        flex-direction: column;        
+        align-content: center; 
+        align-items: center; 
+        padding: 20px 20px;
+    }
+
+    .insert-box{
+        width: 375px;
+        min-height: 800px;
+    } 
+
+    .message-area{
+        padding: 25px 0 0 15px;
+        width: 90%;
+        min-height: 500px;
+    }
+
+    #message{
+        width: 100%;
+        font-weight: 400;
+        font-size: 32px;
+        padding-right: 30px;
+        resize: none; 
+        overflow: hidden;
+        color: #0A3871;
+        text-transform: lowercase;
+    }
+
+    .info{
+        padding-left: 10px;
+    }
+
+    /* result */
+    .result-box{
+        align-items: center;
+        width: 343px;
+        background: #ffffff;
+        margin-top: 60px;
+        padding: 20px 0px 20px 0px;
+    } 
+    .img_doll{
+        display: none;
+    }
+
+    .initial-text{
+        align-self: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+    }
+    
+    .resultMessage{
+        min-height: 595px;
+        max-width: 100%;
+        white-space: break-word;
+        padding: 0;
+        text-size-adjust: auto;
+    }
+    
+    /* buttons*/
+    .btn-copy{
+        background: burlywood;
+    }
+    
+    .btns{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 30px 0 30px;
+    }
+
+    .btn{
+        margin: 10px;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Encryptor</title>
+</head>
+<body id="body">
+    <header>
+        
+    </header>
+
+    <main>
+        <div class="text-boxes">
+            <!-- Section to insert message -->
+            <section class="insert-box">
+                <img class="alura-logo" src="src/Logo.svg" alt="alura-logo">
+                <div class="message-area">
+                    <textarea name="textarea" id="message" type="text" placeholder="Enter your message"></textarea>
+                </div>
+                <p class="info"> Only lowercase letters and no accents</p>
+                <div class="btns">
+                    <button class="btn" id="encrypt" onclick="btnEncrypt();">Encrypt</button>
+                    <button class="btn" id="decrypt" onclick="btnDecrypt();">Decrypt</button>
+                </div>
+            </section>
+            
+            <!-- Section to show the result -->
+            <section>
+                <div class="result-box">
+                    <div class="initial-text" id="resultBoxInitial">
+                        <img class="img_doll" src="src/doll.svg" alt="doll">
+                        <p>No message was found</p>
+                        <p>Enter the text you want to encrypt or decrypt</p>
+                    </div>
+                    <textarea name="textarea" class="resultMessage" id="resultMessage" type="text" hidden></textarea>
+                    
+                    <div class="btns-2">
+                        <button class="btn" id="btn-copy" hidden>Copy Text</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+        
+    </main>
+
+    <footer>
+         <p>Alura Latam Challenge</p>
+         <p>Created by Adriana Ibarra</p>
+         <a href="https://github.com/AdrianaIbarraG" target="_blank"><img class="logos" src="src/github_svg.svg" alt="Github"></a>
+         <a href="https://www.linkedin.com/in/adriana-ibarrag/" target="_blank"><img class="logos" src="src/linkedIn_svg.svg" alt="linkedin"></a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+    
+</html>
